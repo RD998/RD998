@@ -1,4 +1,4 @@
-## Hi there 👋
+## Non existent entity
 
 <!--
 **RD998/RD998** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
