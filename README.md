@@ -1,153 +1,150 @@
-
 <div align="center">
 
-<!-- DYNAMIC HEADER WAVE & BANNER -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:1e1b4b,100:06b6d4&height=220&section=header&text=RACHIT%20DHERI%20//%20RD998&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Full-Stack%20Engineering%20%E2%80%A2%20Applied%20Computer%20Vision%20%E2%80%A2%20Systems%20Architecture&descAlignY=58&descSize=18" alt="Rachit Dheri Banner" />
+```
+╔══════════════════════════════════════════════════════════════════════════════════╗
+║  RACHIT DHERI // @RD998                                                          ║
+║  > "Non existent entity 🪦"                                                      ║
+║  > Full-Stack Web Engineering • Browser-Based Computer Vision • Data Pipelines   ║
+╚══════════════════════════════════════════════════════════════════════════════════╝
+```
 
-<!-- ANIMATED TYPING TAGLINE (Customize your exact GitHub tagline in the 'lines=' parameter below!) -->
-<a href="https://github.com/RD998">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=21&duration=3000&pause=1000&color=06B6D4&center=true&vCenter=true&multiline=false&width=850&height=45&lines=%3E+ Non+ existent+entity+(%F0%9F%AA%A6);%3E+Full-Stack+Web+%26+Browser-Based+ML+%7C+SRM+IST;%3E+Architecting+FastAPI+Backends+%26+Real-Time+Client+Engines;%3E+Breaking+monoliths.+Building+for+scale." alt="Typing SVG" />
-</a>
-
-<br/>
-
-<!-- STATUS & TELEMETRY PILLS -->
-![Institution](https://img.shields.io/badge/SRM_IST_KTR-Engineering-06b6d4?style=for-the-badge&logo=academia&logoColor=white&labelColor=0f172a)
-![Focus](https://img.shields.io/badge/Focus-Systems_&_Applied_AI-8b5cf6?style=for-the-badge&logo=fastapi&logoColor=white&labelColor=0f172a)
-
+![SRM IST](https://img.shields.io/badge/SRM_IST_KTR-Engineering-06b6d4?style=for-the-badge&labelColor=0f172a)
+![Stack](https://img.shields.io/badge/Stack-Python_%7C_JS_ES6+_%7C_FastAPI_%7C_Flask-8b5cf6?style=for-the-badge&labelColor=0f172a)
 [![GitHub Followers](https://img.shields.io/github/followers/RD998?style=for-the-badge&logo=github&color=3b82f6&labelColor=0f172a)](https://github.com/RD998)
 
 </div>
 
 ---
 
-### `whoami` // System Telemetry
+### ⚡ System Telemetry // `whoami`
 
 ```yaml
-developer: "Rachit Dheri (@RD998)"
-location: "SRM Institute of Science and Technology, KTR"
-philosophy: "Don't just build static pages—engineer stateful, reactive systems that solve bottlenecks."
-architecture_focus:
-  - Full-Stack Web Applications (Vanilla JS ES6+, FastAPI, PostgreSQL, MongoDB)
-  - Client-Side Machine Learning & AR (PoseNet, Teachable Machine, Web ML)
-  - Algorithmic Load-Balancing & Scientific Computing (Python, Cheminformatics, CSV Pipelines)
-currently_leveling_up: ["React", "TypeScript", "Docker & Containerization", "Event-Driven Systems"]
+entity: "Rachit Dheri (@RD998)"
+status: "Non existent entity 🪦 // Building real-world software"
+institution: "SRM Institute of Science and Technology"
+core_competencies:
+  backend_&_databases: ["Python", "FastAPI", "Flask", "PostgreSQL", "Firebase RTDB", "CSV Data Pipelines"]
+  frontend_&_ui:       ["JavaScript (ES6+)", "HTML5 / CSS3", "DOM State Caching", "Bootstrap", "ScrollReveal.js"]
+  computer_vision_ar:  ["ml5.js (PoseNet)", "p5.js Canvas Engine", "Teachable Machine", "Real-Time Keypoint Math"]
 ```
 
 ---
 
-### 🛠️ Interactive Project Blueprints
-*Click on any system module below to expand its live architecture diagram and technical breakdown.*
+### 🏗️ Featured Systems Architecture (Click to Expand Blueprints)
 
 <details open>
-<summary><b>🏥 01 // PATHFINDER — Healthcare Routing & Waitlist Engine</b> <i>(Click to toggle architecture)</i></summary>
+<summary><b>🏥 01 // PATHFINDER — Healthcare Routing & Conflict-Aware Waitlist Engine</b></summary>
 <br/>
 
-> **The Engineering Problem:** Standard appointment portals fail when schedules fill up and struggle with heavy multi-page payload transfers.  
-> **The Solution:** A full-stack medical booking system featuring accessibility filtering, dynamic slot locks, an automated conflict-aware waitlist (`HTTP 409` handling), and a custom client-side `localStorage` state cache that eliminates redundant database reads across page transitions.
+> **The Architecture:** A multi-page medical appointment platform backed by **FastAPI** and **PostgreSQL**. Engineered a client-side state cache using `localStorage` to handle 1,000+ time-slot payloads across page transitions with zero redundant network calls, paired with an automated waitlist system that catches `HTTP 409` slot conflicts.
 
 ```mermaid
 graph LR
-    A[Client UI: ES6+ JS] -->|URLSearchParams Filter| B(FastAPI Gateway)
-    B -->|Query Facilities & Slots| C[(PostgreSQL DB)]
-    C -->|1000+ Slot Payload| B
-    B -->|JSON Stream| D{Client State Cache}
-    D -->|Instant Render| E[Slot Booking & Waitlist UI]
-    E -->|POST /waitlist| B
-    style A fill:#0f172a,stroke:#06b6d4,stroke-width:2px,color:#fff
-    style B fill:#1e1b4b,stroke:#8b5cf6,stroke-width:2px,color:#fff
-    style C fill:#0f172a,stroke:#10b981,stroke-width:2px,color:#fff
-    style D fill:#06b6d4,stroke:#0f172a,stroke-width:2px,color:#000
-    style E fill:#0f172a,stroke:#06b6d4,stroke-width:2px,color:#fff
+    UI[ES6+ Client UI] -->|URLSearchParams Filter| API(FastAPI Backend)
+    API -->|Query Facilities & Doctors| DB[(PostgreSQL)]
+    DB -->|1000+ Slot Payload| CACHE{localStorage Client Cache}
+    CACHE -->|Zero-Latency Render| BOOK[Slot & Waitlist Engine]
+    BOOK -->|POST /slots/book & /waitlist| API
+    style UI fill:#0f172a,stroke:#06b6d4,stroke-width:2px,color:#fff
+    style API fill:#1e1b4b,stroke:#8b5cf6,stroke-width:2px,color:#fff
+    style DB fill:#0f172a,stroke:#10b981,stroke-width:2px,color:#fff
+    style CACHE fill:#06b6d4,stroke:#0f172a,stroke-width:2px,color:#000
+    style BOOK fill:#0f172a,stroke:#06b6d4,stroke-width:2px,color:#fff
 ```
 
-- **Stack:** `JavaScript (ES6+)` • `FastAPI` • `PostgreSQL` • `HTML5/CSS3` • `Render Cloud`
-- **Key Mechanics:** Asynchronous `fetch()` orchestration, dynamic query parameterization, geolocation-linked navigation, and real-time waitlist state toggling.
+- **Tech Stack:** `JavaScript (ES6+)` • `FastAPI` • `PostgreSQL` • `REST APIs` • `Google Maps URL API`
+- **Key Features:** Multi-criteria accessibility filtering, dynamic slot disabling, live appointment cancellation, and automated waitlist queuing.
 </details>
 
-<details>
-<summary><b>🖨️ 02 // ECO-SPOOL — Smart Campus Algorithmic Print Load-Balancer</b> <i>(Click to toggle architecture)</i></summary>
+<details open>
+<summary><b>🧪 02 // EARTH CORE CHEMICALS — Flask ERP & Automated CSV Data Pipeline</b></summary>
 <br/>
 
-> **The Engineering Problem:** Campus printers suffer from massive physical queues and unexpected ink/paper depletion while nearby nodes sit idle.  
-> **The Solution:** An IoT-simulated resource router that parses uploaded PDFs in memory, calculates hardware penalty weights across campus nodes, and issues cryptographic/QR claim tickets to route students to the optimal machine.
+> **The Architecture:** A full-stack enterprise ordering and inventory management system built with **Python (Flask)**. Reads and mutates raw `.csv` datasets (`products.csv` and `purchases.csv`) on the fly to validate stock quantities, compute order pricing, apply an automated customer loyalty algorithm, and render dynamic HTML data tables for administrators.
 
 ```mermaid
 flowchart TD
-    PDF[User Uploads PDF] -->|FormData Stream| API[FastAPI UploadFile Endpoint]
-    API -->|PyMuPDF / fitz| META[Extract Page Count & Metadata]
-    META --> ALG{Penalty Weighting Engine}
-    ALG -->|Node 1: Queue High +25| P1[Library Printer]
-    ALG -->|Node 2: Ink Low +40| P2[Hostel Printer]
-    ALG -->|Node 3: Optimal Score +5| P3[Tech Park Printer]
-    P3 --> QR[Generate Instant QR Claim Ticket]
-    style ALG fill:#8b5cf6,stroke:#fff,stroke-width:2px,color:#fff
-    style P3 fill:#10b981,stroke:#0f172a,stroke-width:2px,color:#000
-    style QR fill:#06b6d4,stroke:#0f172a,stroke-width:2px,color:#000
+    USER[Customer Order POST] --> FLASK[Flask Server: /place_order]
+    FLASK -->|Read Stream| PROD[(products.csv)]
+    PROD -->|Validate Stock & Price| LOGIC{Loyalty Engine: countig}
+    LOGIC -->|Order #10 Detected| FREE[Apply 100% Loyalty Discount]
+    LOGIC -->|Standard Order| CALC[Quantity * Unit Price]
+    FREE & CALC -->|Append Transaction Row| PURCH[(purchases.csv)]
+    PURCH -->|Server-Side Table Builder| ADMIN[Admin Portal: /admin_dashboard]
+    style FLASK fill:#1e1b4b,stroke:#8b5cf6,stroke-width:2px,color:#fff
+    style LOGIC fill:#06b6d4,stroke:#0f172a,stroke-width:2px,color:#000
+    style ADMIN fill:#0f172a,stroke:#10b981,stroke-width:2px,color:#fff
 ```
 
-- **Stack:** `Python` • `FastAPI` • `PyMuPDF` • `JavaScript FormData API` • `QRCode.js`
+- **Tech Stack:** `Python` • `Flask` • `CSV File I/O Pipelines` • `Jinja2 Templates` • `HTML5/CSS3`
+- **Key Features:** Role-separated Customer and Admin portals, real-time stock threshold validation, automated 10th-order loyalty rewards, and dynamic server-side table generation.
 </details>
 
 <details>
-<summary><b>👁️ 03 // VISION-SOCIAL SUITE — AR Snapchat & Twitter Clones</b> <i>(Click to toggle architecture)</i></summary>
+<summary><b>👁️ 03 // AR POSENET ENGINE — Real-Time Computer Vision & Dynamic Scaling Filter</b></summary>
 <br/>
 
-> **The Engineering Problem:** Running computer vision on a backend server introduces massive video latency and high cloud compute costs.  
-> **The Solution:** Browser-based Augmented Reality and social platforms running real-time **Pose Estimation** and classification directly on the client's GPU/CPU via Web ML.
+> **The Architecture:** A browser-based Augmented Reality camera application using **p5.js** and **ml5.js (PoseNet)**. Instead of static overlays, the engine tracks 2D skeletal keypoints (`nose`, `leftEye`, `rightEye`, `leftWrist`, `rightWrist`) at 30 FPS and calculates real-time pixel deltas to dynamically scale masks and wrist-mounted spell effects as the user moves in 3D space.
 
 ```mermaid
 sequenceDiagram
-    participant Cam as Browser MediaDevices (Webcam)
-    participant ML as PoseNet / Teachable Machine
-    participant DOM as Canvas & AR Overlay Engine
-    Cam->>ML: 30 FPS Video Stream (Client-Side)
-    ML->>ML: Real-Time Landmark Keypoint Detection
-    ML->>DOM: Mathematical Coordinate Array (X, Y, Confidence)
-    DOM->>DOM: Render Dynamic Filters & Social Feed Actions
+    participant Cam as Webcam Stream (p5.js)
+    participant ML as ml5.js PoseNet Model
+    participant Math as Coordinate Delta Engine
+    participant Canvas as 650x650 AR Canvas
+    Cam->>ML: Live Video Frame
+    ML->>Math: Keypoints (Nose, Eyes, Wrists)
+    Math->>Math: difference_x_mask = floor(rightEye.x - leftEye.x)
+    Math->>Math: wrist_scale = floor(leftWrist.x - rightWrist.x)
+    Math->>Canvas: Render Scaled Masks & Wrist Overlays
 ```
 
-- **Stack:** `Vanilla JavaScript` • `PoseNet` • `Google Teachable Machine` • `WebRTC / MediaDevices API`
+- **Tech Stack:** `JavaScript` • `ml5.js (PoseNet)` • `p5.js` • `HTML5 Canvas`
+- **Key Features:** Client-side machine learning inference, real-time eye-distance and wrist-distance spatial scaling, multi-filter state cycling, and instant canvas snapshot export (`save1()`).
 </details>
 
 <details>
-<summary><b>🧪 04 // ENTERPRISE DATA & COMPUTATIONAL SCIENCE — Earth Core & Cheminformatics</b> <i>(Click to toggle details)</i></summary>
+<summary><b>💬 04 // QWITTER — Real-Time Cloud Social & Chat Room Platform</b></summary>
 <br/>
 
-- **Earth Core Chemicals Web Utility:** Engineered a custom CSV data processing pipeline and web interface for parsing, structuring, and filtering enterprise chemical datasets.
-- **Ammonia Synthesis & Cheminformatics Lab:** Developed Python-based computational models for a **Gibbs Reactor (Ammonia Synthesis)** alongside **SMILES molecular structure parsing** and property visualization scripts.
-- **AI Tools Directory & Mobile Suite:** Built curated AI competition platforms and cross-platform mobile utilities using **Thunkable**.
+> **The Architecture:** A real-time multi-room messaging platform powered by **Google Firebase Realtime Database**. Uses persistent WebSocket listeners (`on('value')`) to synchronize new chat rooms, broadcast live messages, and increment post likes across all active browsers without refreshing the page.
+
+```mermaid
+graph LR
+    AUTH[User Auth & localStorage] --> ROOMS[Room Directory: kwitter_room.js]
+    ROOMS -->|Create / Select Room| FB[(Firebase Realtime DB)]
+    FB <-->|Live WebSocket .on 'value'| CHAT[Live Chat Stream: kwitter_page.js]
+    CHAT -->|Atomic .update| LIKES[Real-Time Like Counter]
+    LIKES --> FB
+    style FB fill:#f59e0b,stroke:#0f172a,stroke-width:2px,color:#000
+    style CHAT fill:#0f172a,stroke:#06b6d4,stroke-width:2px,color:#fff
+    style ROOMS fill:#1e1b4b,stroke:#8b5cf6,stroke-width:2px,color:#fff
+```
+
+- **Tech Stack:** `JavaScript` • `Firebase Realtime Database` • `Bootstrap` • `HTML5/CSS3`
+</details>
+
+<details>
+<summary><b>🌐 05 // FRONTEND UI & CIVIC-TECH SUITE — YouthVoice AI & Technesia G20</b></summary>
+<br/>
+
+- **YouthVoice AI:** A civic-engagement platform designed to boost youth participation in governance through interactive policy recommendation workflows, custom `.parallax` scrolling mechanics, and viewport animations via **ScrollReveal.js**.
+- **Technesia G20:** An interactive web portal featuring a live case-insensitive DOM card search filter (`searchWebsite()`), a programmatic custom modal prompt (`showCustomPrompt()`) backed by `sessionStorage`, and animated collapsible navigation drawers.
 </details>
 
 ---
 
-### ⚡ The Technical Arsenal
+### 🧰 Technical Matrix
 
-<div align="center">
-
-| Architectural Layer | Technologies & Tooling |
-| :--- | :--- |
-| **Frontend & Web ML** | ![JS](https://skillicons.dev/icons?i=js,html,css,ts,react&theme=dark) <br/> *ES6+ DOM Manipulation, Async Fetch, PoseNet, Teachable Machine* |
-| **Backend & Data Pipelines** | ![Backend](https://skillicons.dev/icons?i=py,fastapi,postgres,mongodb&theme=dark) <br/> *REST APIs, Algorithmic Routing, CSV Pipelines, Scientific Computing* |
-| **DevOps, Security & IDEs** | ![Tools](https://skillicons.dev/icons?i=git,github,vscode,visualstudio,docker&theme=dark) <br/> *Git Workflows, Snyk Security, Render Deployment* |
-
-</div>
-
----
-
-### 📊 Live GitHub Telemetry & Contribution Matrix
-
-<div align="center">
-  <img height="175em" src="https://github-readme-stats.vercel.app/api?username=RD998&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0f172a&title_color=06b6d4&icon_color=8b5cf6" alt="Rachit's GitHub Stats" />
-  <img height="175em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=RD998&layout=compact&theme=tokyonight&hide_border=true&bg_color=0f172a&title_color=06b6d4" alt="Top Languages" />
-</div>
-
-<div align="center">
-  <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=RD998&bg_color=0f172a&color=06b6d4&line=8b5cf6&point=10b981&area=true&hide_border=true" alt="RD998 Activity Graph" />
-</div>
+| Layer | Core Technologies | Applied Engineering Concepts |
+| :--- | :--- | :--- |
+| **Backend & APIs** | `Python` `FastAPI` `Flask` | REST Endpoint Design, Server-Side Rendering, Waitlist Conflict Handling (`HTTP 409`), CSV I/O |
+| **Databases & State** | `PostgreSQL` `Firebase RTDB` `Storage API` | Relational Schemas, Real-Time WebSocket Listeners, Client-Side Caching (`localStorage` / `sessionStorage`) |
+| **Frontend & UI** | `JavaScript (ES6+)` `HTML5` `CSS3` `Bootstrap` | Asynchronous `fetch()`, `URLSearchParams`, Dynamic DOM Injection, ScrollReveal & Parallax |
+| **AI & Computer Vision** | `ml5.js` `PoseNet` `p5.js` `Teachable Machine` | Real-Time Skeletal Landmark Tracking, Euclidean Scaling Math, Client-Side Web ML |
 
 ---
 
 <div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:06b6d4,50:1e1b4b,100:0f172a&height=110&section=footer&text=Let's%20Build%20Something%20Scalable.&fontSize=20&fontColor=ffffff&fontAlignY=65" alt="Footer" />
+  <sub>Built and architected by <b>Rachit Dheri (@RD998)</b> • SRM IST</sub>
 </div>
