@@ -4,12 +4,12 @@
 ╔══════════════════════════════════════════════════════════════════════════════════╗
 ║  RACHIT DHERI // @RD998                                                          ║
 ║  > "Non existent entity 🪦"                                                      ║
-║  > Full-Stack Web Engineering • Browser-Based Computer Vision • Data Pipelines   ║
+║  > Frontend Engineering • Browser-Based Computer Vision • Python Data Pipelines  ║
 ╚══════════════════════════════════════════════════════════════════════════════════╝
 ```
 
 ![SRM IST](https://img.shields.io/badge/SRM_IST_KTR-Engineering-06b6d4?style=for-the-badge&labelColor=0f172a)
-![Stack](https://img.shields.io/badge/Stack-Python_%7C_JS_ES6+_%7C_FastAPI_%7C_Flask-8b5cf6?style=for-the-badge&labelColor=0f172a)
+![Stack](https://img.shields.io/badge/Stack-JS_ES6+_%7C_Python_%7C_Flask_%7C_API_Integration-8b5cf6?style=for-the-badge&labelColor=0f172a)
 [![GitHub Followers](https://img.shields.io/github/followers/RD998?style=for-the-badge&logo=github&color=3b82f6&labelColor=0f172a)](https://github.com/RD998)
 
 </div>
@@ -23,9 +23,9 @@ entity: "Rachit Dheri (@RD998)"
 status: "Non existent entity 🪦 // Building real-world software"
 institution: "SRM Institute of Science and Technology"
 core_competencies:
-  backend_&_databases: ["Python", "FastAPI", "Flask", "PostgreSQL", "Firebase RTDB", "CSV Data Pipelines"]
-  frontend_&_ui:       ["JavaScript (ES6+)", "HTML5 / CSS3", "DOM State Caching", "Bootstrap", "ScrollReveal.js"]
-  computer_vision_ar:  ["ml5.js (PoseNet)", "p5.js Canvas Engine", "Teachable Machine", "Real-Time Keypoint Math"]
+  frontend_&_integration: ["JavaScript (ES6+)", "REST API Consumption (fetch)", "DOM State Caching", "HTML5/CSS3"]
+  python_&_backends:      ["Python", "Flask", "CSV Data Pipelines", "Firebase RTDB"]
+  computer_vision_ar:     ["ml5.js (PoseNet)", "p5.js Canvas Engine", "Teachable Machine", "Real-Time Keypoint Math"]
 ```
 
 ---
@@ -33,34 +33,40 @@ core_competencies:
 ### 🏗️ Featured Systems Architecture (Click to Expand Blueprints)
 
 <details open>
-<summary><b>🏥 01 // PATHFINDER — Healthcare Routing & Conflict-Aware Waitlist Engine</b></summary>
+<summary><b>🏥 01 // PATHFINDER — Client Architecture & API Integration</b></summary>
 <br/>
 
-> **The Architecture:** A multi-page medical appointment platform backed by **FastAPI** and **PostgreSQL**. Engineered a client-side state cache using `localStorage` to handle 1,000+ time-slot payloads across page transitions with zero redundant network calls, paired with an automated waitlist system that catches `HTTP 409` slot conflicts.
+> **My Contribution (Frontend & Integration):** Engineered the client-side architecture for a multi-page medical booking platform. While a teammate developed the FastAPI/PostgreSQL backend, I built the JavaScript (ES6+) integration layer to consume those REST endpoints. To handle massive 1,000+ time-slot payloads across page transitions without redundant network calls, I designed a custom `localStorage` state cache, paired with an asynchronous UI that dynamically handles `HTTP 409` waitlist conflicts.
 
 ```mermaid
 graph LR
-    UI[ES6+ Client UI] -->|URLSearchParams Filter| API(FastAPI Backend)
-    API -->|Query Facilities & Doctors| DB[(PostgreSQL)]
-    DB -->|1000+ Slot Payload| CACHE{localStorage Client Cache}
-    CACHE -->|Zero-Latency Render| BOOK[Slot & Waitlist Engine]
-    BOOK -->|POST /slots/book & /waitlist| API
+    subgraph Client Architecture (My Focus)
+    UI[ES6+ Client UI] -->|URLSearchParams| FETCH(Async Fetch Layer)
+    FETCH -->|JSON Stream| CACHE{localStorage State Cache}
+    CACHE -->|Zero-Latency Render| BOOK[Dynamic Booking UI]
+    end
+    
+    subgraph Server (Teammate)
+    FETCH <-->|REST API| API(FastAPI Backend)
+    API <--> DB[(PostgreSQL)]
+    end
+    
     style UI fill:#0f172a,stroke:#06b6d4,stroke-width:2px,color:#fff
-    style API fill:#1e1b4b,stroke:#8b5cf6,stroke-width:2px,color:#fff
-    style DB fill:#0f172a,stroke:#10b981,stroke-width:2px,color:#fff
+    style FETCH fill:#0f172a,stroke:#06b6d4,stroke-width:2px,color:#fff
     style CACHE fill:#06b6d4,stroke:#0f172a,stroke-width:2px,color:#000
     style BOOK fill:#0f172a,stroke:#06b6d4,stroke-width:2px,color:#fff
+    style API fill:#1e1b4b,stroke:#8b5cf6,stroke-width:2px,color:#fff
 ```
 
-- **Tech Stack:** `JavaScript (ES6+)` • `FastAPI` • `PostgreSQL` • `REST APIs` • `Google Maps URL API`
-- **Key Features:** Multi-criteria accessibility filtering, dynamic slot disabling, live appointment cancellation, and automated waitlist queuing.
+- **My Tech Stack:** `JavaScript (ES6+)` • `Asynchronous fetch()` • `DOM Manipulation` • `HTML5/CSS3`
+- **Key Features:** Multi-criteria accessibility query building, dynamic slot state toggling, and zero-latency page transitions via client-side caching.
 </details>
 
 <details open>
 <summary><b>🧪 02 // EARTH CORE CHEMICALS — Flask ERP & Automated CSV Data Pipeline</b></summary>
 <br/>
 
-> **The Architecture:** A full-stack enterprise ordering and inventory management system built with **Python (Flask)**. Reads and mutates raw `.csv` datasets (`products.csv` and `purchases.csv`) on the fly to validate stock quantities, compute order pricing, apply an automated customer loyalty algorithm, and render dynamic HTML data tables for administrators.
+> **The Architecture:** A full-stack enterprise ordering and inventory management system built entirely with **Python (Flask)**. Reads and mutates raw `.csv` datasets (`products.csv` and `purchases.csv`) on the fly to validate stock quantities, compute order pricing, apply an automated customer loyalty algorithm, and render dynamic HTML data tables for administrators.
 
 ```mermaid
 flowchart TD
@@ -77,7 +83,7 @@ flowchart TD
 ```
 
 - **Tech Stack:** `Python` • `Flask` • `CSV File I/O Pipelines` • `Jinja2 Templates` • `HTML5/CSS3`
-- **Key Features:** Role-separated Customer and Admin portals, real-time stock threshold validation, automated 10th-order loyalty rewards, and dynamic server-side table generation.
+- **Key Features:** Role-separated Customer and Admin portals, real-time stock threshold validation, and automated 10th-order loyalty rewards.
 </details>
 
 <details>
@@ -100,7 +106,6 @@ sequenceDiagram
 ```
 
 - **Tech Stack:** `JavaScript` • `ml5.js (PoseNet)` • `p5.js` • `HTML5 Canvas`
-- **Key Features:** Client-side machine learning inference, real-time eye-distance and wrist-distance spatial scaling, multi-filter state cycling, and instant canvas snapshot export (`save1()`).
 </details>
 
 <details>
@@ -108,18 +113,6 @@ sequenceDiagram
 <br/>
 
 > **The Architecture:** A real-time multi-room messaging platform powered by **Google Firebase Realtime Database**. Uses persistent WebSocket listeners (`on('value')`) to synchronize new chat rooms, broadcast live messages, and increment post likes across all active browsers without refreshing the page.
-
-```mermaid
-graph LR
-    AUTH[User Auth & localStorage] --> ROOMS[Room Directory: kwitter_room.js]
-    ROOMS -->|Create / Select Room| FB[(Firebase Realtime DB)]
-    FB <-->|Live WebSocket .on 'value'| CHAT[Live Chat Stream: kwitter_page.js]
-    CHAT -->|Atomic .update| LIKES[Real-Time Like Counter]
-    LIKES --> FB
-    style FB fill:#f59e0b,stroke:#0f172a,stroke-width:2px,color:#000
-    style CHAT fill:#0f172a,stroke:#06b6d4,stroke-width:2px,color:#fff
-    style ROOMS fill:#1e1b4b,stroke:#8b5cf6,stroke-width:2px,color:#fff
-```
 
 - **Tech Stack:** `JavaScript` • `Firebase Realtime Database` • `Bootstrap` • `HTML5/CSS3`
 </details>
@@ -129,7 +122,7 @@ graph LR
 <br/>
 
 - **YouthVoice AI:** A civic-engagement platform designed to boost youth participation in governance through interactive policy recommendation workflows, custom `.parallax` scrolling mechanics, and viewport animations via **ScrollReveal.js**.
-- **Technesia G20:** An interactive web portal featuring a live case-insensitive DOM card search filter (`searchWebsite()`), a programmatic custom modal prompt (`showCustomPrompt()`) backed by `sessionStorage`, and animated collapsible navigation drawers.
+- **Technesia G20:** An interactive web portal featuring a live case-insensitive DOM card search filter, a programmatic custom modal prompt backed by `sessionStorage`, and animated collapsible navigation drawers.
 </details>
 
 ---
@@ -138,10 +131,10 @@ graph LR
 
 | Layer | Core Technologies | Applied Engineering Concepts |
 | :--- | :--- | :--- |
-| **Backend & APIs** | `Python` `FastAPI` `Flask` | REST Endpoint Design, Server-Side Rendering, Waitlist Conflict Handling (`HTTP 409`), CSV I/O |
-| **Databases & State** | `PostgreSQL` `Firebase RTDB` `Storage API` | Relational Schemas, Real-Time WebSocket Listeners, Client-Side Caching (`localStorage` / `sessionStorage`) |
-| **Frontend & UI** | `JavaScript (ES6+)` `HTML5` `CSS3` `Bootstrap` | Asynchronous `fetch()`, `URLSearchParams`, Dynamic DOM Injection, ScrollReveal & Parallax |
-| **AI & Computer Vision** | `ml5.js` `PoseNet` `p5.js` `Teachable Machine` | Real-Time Skeletal Landmark Tracking, Euclidean Scaling Math, Client-Side Web ML |
+| **Frontend Integration** | `JavaScript (ES6+)` `HTML5/CSS3` `Bootstrap` | Asynchronous `fetch()`, REST API Consumption, Client-Side State Caching (`localStorage`) |
+| **Python Ecosystem** | `Python` `Flask` | Server-Side Rendering, CSV Data Pipeline I/O, Backend Algorithmic Logic |
+| **Databases & Cloud** | `Firebase RTDB` `Storage API` | Real-Time WebSocket Listeners, NoSQL Cloud Sync |
+| **AI & Computer Vision** | `ml5.js` `PoseNet` `p5.js` | Real-Time Skeletal Landmark Tracking, Euclidean Scaling Math, Client-Side Web ML |
 
 ---
 
