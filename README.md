@@ -97,7 +97,7 @@ flowchart LR
 </details>
 
 <details>
-<summary><b>👁️ 03 // AR POSENET ENGINE — Real-Time Computer Vision & Spatial Scaling</b></summary>
+<summary><b>👁️ 03 // Modified Filer app — Real-Time Computer Vision & Spatial Scaling</b></summary>
 <br/>
 
 > **The Architecture:** A browser-based Augmented Reality filter app built with **p5.js** and **ml5.js (PoseNet)**. Tracks 2D skeletal keypoints (`nose`, `leftEye`, `rightEye`, `leftWrist`, `rightWrist`) in real time and computes pixel coordinate deltas so superhero masks and wrist-mounted spell effects dynamically scale as the user moves toward or away from the webcam.
@@ -153,7 +153,7 @@ flowchart LR
 <div align="center">
 
 <!-- 52-WEEK CONTRIBUTION HEATMAP -->
-<img width="98%" src="https://ghchart.rshah.org/06b6d4/RD998" alt="RD998's GitHub Contribution Map" />
+<img width="98%" src="https://ghchart.rshah.org/RD998" alt="RD998's GitHub Contribution Map" />
 
 <br/><br/>
 
@@ -163,7 +163,7 @@ flowchart LR
 <br/><br/>
 
 <!-- REAL-TIME ACTIVITY MONITOR GRAPH -->
-<img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=RD998&bg_color=0d1117&color=06b6d4&line=8b5cf6&point=10b981&area=true&hide_border=true" alt="RD998 Real-Time Activity Monitor" />
+<!--  <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=RD998&bg_color=0d1117&color=06b6d4&line=8b5cf6&point=10b981&area=true&hide_border=true" alt="RD998 Real-Time Activity Monitor" />-->
 
 </div>
 
