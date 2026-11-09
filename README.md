@@ -6,7 +6,7 @@
 
 <!-- ANIMATED TYPING TAGLINE (Customize your exact GitHub tagline in the 'lines=' parameter below!) -->
 <a href="https://github.com/RD998">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=21&duration=3000&pause=1000&color=06B6D4&center=true&vCenter=true&multiline=false&width=850&height=45&lines=%3E+ Non+ existent+entity+🪦;%3E+Full-Stack+Web+%26+Browser-Based+ML+%7C+SRM+IST;%3E+Architecting+FastAPI+Backends+%26+Real-Time+Client+Engines;%3E+Breaking+monoliths.+Building+for+scale." alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=21&duration=3000&pause=1000&color=06B6D4&center=true&vCenter=true&multiline=false&width=850&height=45&lines=%3E+ Non+ existent+entity+(%F0%9F%AA%A6);%3E+Full-Stack+Web+%26+Browser-Based+ML+%7C+SRM+IST;%3E+Architecting+FastAPI+Backends+%26+Real-Time+Client+Engines;%3E+Breaking+monoliths.+Building+for+scale." alt="Typing SVG" />
 </a>
 
 <br/>
@@ -14,7 +14,7 @@
 <!-- STATUS & TELEMETRY PILLS -->
 ![Institution](https://img.shields.io/badge/SRM_IST_KTR-Engineering-06b6d4?style=for-the-badge&logo=academia&logoColor=white&labelColor=0f172a)
 ![Focus](https://img.shields.io/badge/Focus-Systems_&_Applied_AI-8b5cf6?style=for-the-badge&logo=fastapi&logoColor=white&labelColor=0f172a)
-![Status](https://img.shields.io/badge/Hackathon_Mode-Active_⚡-10b981?style=for-the-badge&labelColor=0f172a)
+
 [![GitHub Followers](https://img.shields.io/github/followers/RD998?style=for-the-badge&logo=github&color=3b82f6&labelColor=0f172a)](https://github.com/RD998)
 
 </div>
